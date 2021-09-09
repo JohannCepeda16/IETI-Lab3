@@ -1,11 +1,11 @@
 package org.ada.school.controller.auth;
 
-public class LoginDTO {
+public class LoginDto {
     String email;
 
     String password;
 
-    public LoginDTO(String email, String password) {
+    public LoginDto(String email, String password) {
         this.email = email;
         this.password = password;
     }
