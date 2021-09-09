@@ -31,8 +31,7 @@ import static org.ada.school.utils.Constants.COOKIE_NAME;
 @Component
 public class JwtRequestFilter extends OncePerRequestFilter {
 
-    @Value("${app.secret}")
-    String secret;
+    String secret = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTMwZmMzMWYwNTk2YzE0YzRiOWY5NTMiLCJhZGFfcm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE2MzA2MDAzMjAsImV4cCI6MTYzMDY4NjcyMH0.s29NZMHYDCsCXqj9W9ZajNnlwyzW4qJG832Z3PXhwhk";
 
     public JwtRequestFilter() {
 

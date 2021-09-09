@@ -6,7 +6,6 @@ import org.ada.school.exception.InvalidCredentialsException;
 import org.ada.school.repository.document.User;
 import org.ada.school.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,8 +22,7 @@ import static org.ada.school.utils.Constants.TOKEN_DURATION_MINUTES;
 @RequestMapping("v1/auth")
 public class AuthController {
 
-    @Value("${app.secret}")
-    String secret;
+    String secret ="Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MTMwZmMzMWYwNTk2YzE0YzRiOWY5NTMiLCJhZGFfcm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE2MzA2MDAzMjAsImV4cCI6MTYzMDY4NjcyMH0.s29NZMHYDCsCXqj9W9ZajNnlwyzW4qJG832Z3PXhwhk";
 
     private final UserService userService;
 
