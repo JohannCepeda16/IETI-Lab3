@@ -13,8 +13,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().cors().and().csrf().disable().antMatchers(HttpMethod.GET, "/v1/health").permitAll()
-                .antMatchers(HttpMethod.POST, "/v1/auth").permitAll().anyRequest().authenticated().and()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+        http.authorizeRequests().cors().and().csrf().disable().antMatchers(HttpMethod.POST, "/v1/user").permitAll()
+                .antMatchers(HttpMethod.GET, "/v1/health").permitAll().antMatchers(HttpMethod.POST, "/v1/auth")
+                .permitAll().anyRequest().authenticated().and().sessionManagement()
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
 }
